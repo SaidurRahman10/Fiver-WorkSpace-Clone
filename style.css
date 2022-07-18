@@ -82,8 +82,8 @@ body {
 #header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 20px 80px;
+  justify-content: space-between;
+  padding: 20px 40px;
   background-color: transparent;
   z-index: 999;
   position: sticky;
@@ -404,4 +404,159 @@ footer .footer-main a:hover {
 hr {
   color: #817e7e;
   width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  /* Navbar responsive */
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+    padding: 80px 0 0 10px;
+  }
+  .nav-btn {
+    display: none;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+    list-style: none;
+    padding: 0 1rem;
+    
+  }
+ 
+
+  .bar,
+  .fa-times {
+    width: 1.5rem;
+    height: 3px;
+    display: block;
+    color: #fff;
+    padding: 0;
+    margin: 6px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #000;
+  }
+
+  .bar:nth-child(1) {
+    width: 100%;
+  }
+
+  .bar:nth-child(2) {
+    width: 200%;
+  }
+
+  .bar:nth-child(3) {
+    width: 300%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(-315deg);
+    transform: translateY(8px) rotate(-315deg);
+    width: 300%;
+  }
+  .active .bar:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+    width: 300%;
+  }
+
+  a.nav-link {
+    margin: 1rem 0;
+    color: #333;
+    z-index: 1;
+  }
+
+  .active {
+    right: 0;
+    z-index: 100;
+    transition: 0.2s ease;
+  }
+
+  .container{
+    background-position: top 30% right 40%;
+  }
+  #hero{
+    height: 70vh;
+    padding: 0 80px;
+   
+  }
+  #hero h1 {
+    font-size: 40px;
+}
+#hero h3 {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+#body1 h1 {
+  font-size: 40px;
+  line-height: auto;
+
+}
+#body1 .button4 .btn4 {
+  padding: 8px 20px;
+ 
+}
+#get360 .icon-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-div {
+  display: flex;
+ flex-direction: column;
+}
+#input-section {
+
+  
+  height: 100vh;
+ 
+}
+form input[type="email"] {
+  padding: 0px 50px;
+  
+}
+form input[type="submit"] {
+  
+  padding: 10px 5px;
+  
+  font-size: 15px;
+  
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 }
